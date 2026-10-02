@@ -1,6 +1,6 @@
-import './Option.css'
+import './AnswerOption.css'
 
-function Option({ optionText, optionKey, isSelected, isCorrect, isAnswered, onClick }) {
+function AnswerOption({ optionText, optionKey, isSelected, isCorrect, isAnswered, onClick }) {
 	const classes = [
 		'quiz-option',
 		isSelected && 'is-selected',
@@ -18,4 +18,4 @@ function Option({ optionText, optionKey, isSelected, isCorrect, isAnswered, onCl
 	)
 }
 
-export default Option
+export default AnswerOption

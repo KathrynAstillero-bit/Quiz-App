@@ -1,6 +1,6 @@
-import './ProgressComponent.css'
+import './ProgressBar.css'
 
-function ProgressComponent({ currentStep, totalSteps }) {
+function ProgressBar({ currentStep, totalSteps }) {
 	const progress = totalSteps === 0 ? 0 : Math.min((currentStep / totalSteps) * 100, 100)
 
 	return (
@@ -13,4 +13,4 @@ function ProgressComponent({ currentStep, totalSteps }) {
 	)
 }
 
-export default ProgressComponent
+export default ProgressBar

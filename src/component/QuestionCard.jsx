@@ -1,7 +1,7 @@
-import Option from './Option.jsx'
-import './Question.css'
+import AnswerOption from './AnswerOption.jsx'
+import './QuestionCard.css'
 
-function Question({ currentQuestion, totalQuestions, selectedKey, isAnswered, onSelect, onNext, isLastQuestion }) {
+function QuestionCard({ currentQuestion, totalQuestions, selectedKey, isAnswered, onSelect, onNext, isLastQuestion }) {
 	const correctKey = currentQuestion.answer
 	const questionNumber = currentQuestion.qnum
 	const optionKeys = ['A', 'B', 'C', 'D']
@@ -15,7 +15,7 @@ function Question({ currentQuestion, totalQuestions, selectedKey, isAnswered, on
 			<h1 className="question-prompt">{currentQuestion.question}</h1>
 			<div className="question-options">
 				{currentQuestion.options.map((optionText, index) => (
-					<Option
+					<AnswerOption
 						key={optionKeys[index]}
 						optionText={optionText}
 						optionKey={optionKeys[index]}
@@ -39,4 +39,4 @@ function Question({ currentQuestion, totalQuestions, selectedKey, isAnswered, on
 	)
 }
 
-export default Question
+export default QuestionCard
