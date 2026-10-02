@@ -1,0 +1,54 @@
+.quiz-progress {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1.35rem;
+}
+
+.progress-track {
+	position: relative;
+	height: 18px;
+	padding: 3px;
+	border: 1px solid #52433f;
+	border-radius: 999px;
+	background: linear-gradient(180deg, #574944, #312b2b 55%, #66514a);
+	box-shadow: inset 0 2px 4px rgb(0 0 0 / 75%), 0 1px 0 rgb(255 255 255 / 80%), 0 3px 5px rgb(74 43 58 / 20%);
+}
+
+.progress-fill {
+	position: relative;
+	height: 100%;
+	min-width: 0;
+	border-radius: inherit;
+	background: linear-gradient(180deg, #ffb1dc 0%, #f452ae 42%, #d8208c 72%, #f774c1 100%);
+	box-shadow: inset 0 1px 2px rgb(255 255 255 / 88%), 0 0 9px rgb(247 66 174 / 52%);
+	transition: width 420ms cubic-bezier(.2, .8, .2, 1);
+}
+
+.progress-fill::after {
+	position: absolute;
+	inset: 1px 5px auto;
+	height: 38%;
+	border-radius: 999px;
+	background: rgb(255 255 255 / 56%);
+	content: '';
+}
+
+.progress-count {
+	color: #775569;
+	font-size: .75rem;
+	font-weight: 900;
+	white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+	.quiz-progress {
+		grid-template-columns: 1fr;
+		gap: .45rem;
+	}
+
+	.progress-count {
+		justify-self: end;
+	}
+}
